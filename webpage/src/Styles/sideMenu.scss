@@ -1,0 +1,39 @@
+.sideMenu__container{
+    width: 20%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+    .sideMenu__container-link{
+        flex:3 1 auto;
+        background-color: #D8CCA3;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: .3s ease-in all;
+
+    }
+
+    .sideMenu__container-button{
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+
+        label{
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+    .sideMenu__container{
+        display: none;
+    }
+
+}
