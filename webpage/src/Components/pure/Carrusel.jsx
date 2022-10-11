@@ -42,11 +42,11 @@ export default function Carrusel() {
     <Box sx={{ maxWidth: '100vw', flexGrow: 1, display: 'flex', margin:'auto' }}>
 
       <MobileStepper
-        variant="dots"
+        variant="none"
         steps={maxSteps}
         position="static"
         activeStep={activeStep}
-        style={{backgroundColor: 'transparent', borderRadius: '20px'}}
+        style={{backgroundColor: 'transparent', borderRadius: '20px', flex:'1 1 auto'}}
         backButton={
           <Button fontSize="large" onClick={handleBack} disabled={activeStep === 0} >
             {theme.direction === 'rtl' ? (
@@ -79,11 +79,11 @@ export default function Carrusel() {
 
 
       <MobileStepper
-        variant="dots"
+        variant="none"
         steps={maxSteps}
         position="static"
         activeStep={activeStep}
-        style={{backgroundColor: 'transparent', borderRadius: '10px'}}
+        style={{backgroundColor: 'transparent', borderRadius: '10px' , flex:'1 1 auto'}}
         nextButton={
           <Button
             size="Large"
@@ -104,6 +104,15 @@ export default function Carrusel() {
         }
       />
     </Box>
+
+    <MobileStepper
+        variant="dots"
+        steps={maxSteps}
+        position="static"
+        activeStep={activeStep}
+        style={{backgroundColor: 'transparent', borderRadius: '10px', justifyContent:'center'}}
+      />
+
     </>
   );
 }
