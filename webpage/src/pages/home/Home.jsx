@@ -37,7 +37,7 @@ export const Home = () => {
       </article>
 
 
-      <article className='p-1'>
+      <article className='p-1 '>
 
         <Carrusel></Carrusel>
 
