@@ -1,7 +1,8 @@
 import React from 'react'
 import Carusel from 'react-elastic-carousel'
+import Carrusel from '../../Components/pure/Carrusel'
 import Item from '../../Components/pure/Item'
-import SwipeableTextMobileStepper from '../../Components/pure/SwipeableTextMobileStepper'
+
 
 export const Home = () => {
 
@@ -38,7 +39,7 @@ export const Home = () => {
 
       <article className='p-1'>
 
-        <SwipeableTextMobileStepper></SwipeableTextMobileStepper>
+        <Carrusel></Carrusel>
 
       </article>
     </section>
