@@ -24,8 +24,8 @@ export const Home = () => {
 
 
   return (
-    <section className='container'>
-      <article className='p-3'>
+    <main className='container'>
+      <section className='p-5'>
 
       <p>
 
@@ -34,14 +34,14 @@ export const Home = () => {
 
       </p>
 
-      </article>
+      </section>
 
 
-      <article className='p-1 '>
+      <section className='p-1 '>
 
         <Carrusel></Carrusel>
 
-      </article>
-    </section>
+      </section>
+    </main>
   )
 }
