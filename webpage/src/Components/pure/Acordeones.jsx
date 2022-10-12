@@ -16,7 +16,7 @@ const Accordion = styled((props) => (
   },
   '&:before': {
     display: 'none',
-  },
+  },'background':'#EDDFB3','color': '#000'
 }));
 
 const AccordionSummary = styled((props) => (
@@ -28,7 +28,7 @@ const AccordionSummary = styled((props) => (
   backgroundColor:
     theme.palette.mode === 'dark'
       ? 'rgba(255, 255, 255, .05)'
-      : 'rgba(0, 0, 0, .03)',
+      : 'rgba(117, 155, 255, .03)',
   flexDirection: 'row-reverse',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(90deg)',
@@ -44,15 +44,21 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function Acordeones() {
-  const [expanded, setExpanded] = React.useState('panel1');
+  const [expanded, setExpanded] = React.useState('');
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
-
+//todo iterar sobre el archivo externp 'temas' e ir devolviendo un acordeones
   return (
     <div>
+
+
+
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+
+
+
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography>Un arcordeón mas</Typography>
         </AccordionSummary>
@@ -66,6 +72,7 @@ export default function Acordeones() {
 
         </AccordionDetails>
       </Accordion>
+
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
           <Typography>Un arcordeón mas 2</Typography>
@@ -79,6 +86,8 @@ export default function Acordeones() {
           </Typography>
         </AccordionDetails>
       </Accordion>
+
+
       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
           <Typography>Un arcordeón mas #3</Typography>
