@@ -4,6 +4,7 @@ import { Home } from './pages/home/Home'
 import NotFoundPage from './pages/404/NotFoundPage';
 import SideMenu from './pages/sideMenu/SideMenu';
 import VideosPage from './routes/VideosPage';
+import { Footer } from './pages/home/Footer';
 
 
 function App() {
@@ -34,6 +35,8 @@ function App() {
                         <Route path={routes[1].path} element={routes[1].file}/>
                         <Route path={'*'} element={<NotFoundPage/>}/>
                   </Routes>
+
+              <Footer></Footer>
     </Router>
 
 
