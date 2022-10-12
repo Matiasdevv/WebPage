@@ -8,6 +8,10 @@ body {
   background-color: #EDDFB3;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 
 ::-webkit-scrollbar{
     background: #EDDFB3;
