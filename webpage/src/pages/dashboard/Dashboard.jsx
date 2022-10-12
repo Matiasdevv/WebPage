@@ -11,7 +11,7 @@ const Dashboard = () => {
 
   return (
 
-        <div className='dash-container'>
+        <header className='dash-container'>
 
           <div className='flex-item logo'>
             <Link to={'/'} className='logo' title='logo' ><i className="bi bi-shop"></i></Link>
@@ -28,7 +28,7 @@ const Dashboard = () => {
                 <Link to={'/Prueba'} className='link' title='Realizar prueba' ><FeedIcon/></Link>
           </div>
 
-        </div>
+        </header>
 
   )
 }

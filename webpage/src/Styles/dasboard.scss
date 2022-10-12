@@ -8,12 +8,23 @@
 .dash-container{
     background: var(--dashBack);
     display: flex;
-    height: 3em;
+    height: 3.5em;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top:0;
+
+    box-shadow: -3px 13px 26px -10px rgba(255,255,255,0.46);
+
+
+
     .flex-item{
         flex: 1 1 auto;
 
+    }
+
+    .nav-container{
+        display: flex;
     }
 
     .buscador{
