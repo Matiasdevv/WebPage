@@ -1,14 +1,19 @@
+
+
+
 .sideMenu__container{
-    width: 25%;
+    width: 0%;
     height: 100vh;
     position: fixed;
     display: flex;
     flex-direction: row;
-
-
+    background-color: #0002;
+    transition: .7s ease-in-out all;
+    z-index: 0;
 
     .sideMenu__container-link{
-        width: 0;
+
+        width: 0%;
         background-color: #EDDFB3;
         justify-content: space-between;
         overflow: hidden;
@@ -17,6 +22,8 @@
 
     .sideMenu__container-button{
         margin: auto 0;
+        padding: 0.5rem;
+        z-index: 10;
 
         label{
             font-size: 2rem;
