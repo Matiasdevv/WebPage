@@ -1,14 +1,16 @@
 import React from 'react'
 
-const VideosPage = () => {
+const VideosPage = ({video}) => {
   return (
     <div>
 
       <div className='page__content'>
           <p>some text</p>
-          <img src='' />
-      </div>
 
+          <div>
+            {video}
+          </div>
+      </div>
     </div>
   )
 }

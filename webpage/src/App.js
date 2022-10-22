@@ -5,9 +5,12 @@ import NotFoundPage from './pages/404/NotFoundPage';
 import SideMenu from './pages/sideMenu/SideMenu';
 import VideosPage from './routes/VideosPage';
 import { Footer } from './pages/home/Footer';
+import { steps } from './models/steps';
 
 
 function App() {
+
+
 
   const routes = [
     {
@@ -16,7 +19,7 @@ function App() {
     },
     {
       path: '/page2',
-      file: <VideosPage/>
+      file: <VideosPage video={steps[0].video}/>
     }
   ]
 
@@ -33,6 +36,7 @@ function App() {
                   <Routes>
                         <Route path={routes[0].path} element={routes[0].file}/>
                         <Route path={routes[1].path} element={routes[1].file}/>
+                        <Route path={'/page3'} element={<VideosPage video={steps[1].video} />}/>
                         <Route path={'*'} element={<NotFoundPage/>}/>
                   </Routes>
 

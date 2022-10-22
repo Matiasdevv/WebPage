@@ -7,6 +7,8 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { temas } from '../../models/Temas';
 
+import {Link} from 'react-router-dom'
+
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -53,7 +55,13 @@ export default function Acordeones() {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+
+
+  //todo agregar atributo path al objeto de los temas
   return (
+
+
+
     <div>
       {temas.map(tema=>{
 
@@ -67,7 +75,8 @@ export default function Acordeones() {
             {tema.descripcion}
           </Typography>
 
-          <button>Ver video</button>
+          <Link to={tema.panel} >Ver video</Link>
+
         </AccordionDetails>
       </Accordion>
         )
