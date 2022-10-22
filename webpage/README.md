@@ -10,8 +10,13 @@ También se hace uso de **Bootstrap, Sass, MaterialUI, etc**
 Tener descargado **Node** y **Git**
 
 
+## Primeros pasos
 
-## Codigo disponible
+Una vez abrierto el editor de codigo (recomendado: vscode), generar una nueva terminal con _ctrl + ñ_.\
+ Dentro de esta escribiremos **'npm i'**, esto instalará todos los recursos necesarios para que nuestra aplicación funcione correctamente.
+
+
+## Iniciando el proyecto
 
 Una vez *descargado/clonado* el proyecto, podemos inilicializarlo con:
 
