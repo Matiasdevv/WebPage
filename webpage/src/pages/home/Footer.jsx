@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../../Styles/Footer.scss'
 
 export const Footer = () => {
   return (
-    <footer className='d-flex'>
+    <footer className='d-flex footer'>
 
       <div className='col'>
         <div className='container flex-col'>

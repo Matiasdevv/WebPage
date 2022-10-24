@@ -6,6 +6,7 @@ import SideMenu from './pages/sideMenu/SideMenu';
 import VideosPage from './routes/VideosPage';
 import { Footer } from './pages/home/Footer';
 import { steps } from './models/steps';
+import { AboutUs } from './routes/AboutUs';
 
 
 function App() {
@@ -36,7 +37,8 @@ function App() {
                   <Routes>
                         <Route path={routes[0].path} element={routes[0].file}/>
                         <Route path={routes[1].path} element={routes[1].file}/>
-                        <Route path={'/page3'} element={<VideosPage video={steps[1].video} />}/>
+                        <Route path={'/ver/:video'} element={<VideosPage/>}/>
+                        <Route path={'/sobre-nosotros'} element={<AboutUs/>}/>
                         <Route path={'*'} element={<NotFoundPage/>}/>
                   </Routes>
 

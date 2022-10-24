@@ -24,8 +24,8 @@ const Dashboard = () => {
 
           <div className='flex-item link-container'>
                 <Link to={'/'} className='link' title='Página principal'><i className="bi bi-house-door"></i></Link>
-                <Link to={'/Sobre-nosotros'} className='link' title='Sobre nosotros'><i className="bi bi-people-fill"></i></Link>
-                <Link to={'/Prueba'} className='link' title='Realizar prueba' ><FeedIcon/></Link>
+                <Link to={'/sobre-nosotros'} className='link' title='Sobre nosotros'><i className="bi bi-people-fill"></i></Link>
+                <a href='https://google.com' className='link' title='Realizar prueba' target={'_blank'} ><FeedIcon/></a>
           </div>
 
         </header>
