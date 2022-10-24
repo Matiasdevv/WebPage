@@ -62,25 +62,94 @@ export default function Acordeones() {
 
 
 
-    <div>
-      {temas.map(tema=>{
+    <section>
+      {temas.map((tema,i)=>{
 
         return(
-          <Accordion expanded={expanded === tema.panel} onChange={handleChange(tema.panel)}>
-        <AccordionSummary aria-controls="panel1d-content"  id="panel1d-header">
-          <Typography>{tema.tema}</Typography>
+          <Accordion expanded={expanded === tema.panel} onChange={handleChange(tema.panel)} key={i}>
+            <AccordionSummary aria-controls="panel1d-content"  id="panel1d-header">
+              <Typography>{tema.tema}</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+                <Typography Typography>
+                  {tema.descripcion}
+                </Typography>
+                  <Link to={`/ver/${tema.tema}`} >Ver video</Link>
+              </AccordionDetails>
+            </Accordion>
+        )
+      })}
+
+      <Accordion expanded={true} onChange={handleChange('panel5')}>
+        <AccordionSummary aria-controls="panel5d-content"  id="panel5d-header">
+          <Typography>Tipo de voto</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+
+        <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
+        <AccordionSummary aria-controls="panel6d-content"  id="panel6d-header">
+          <Typography>Voto Nulo</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <Typography>
-            {tema.descripcion}
+            texto
           </Typography>
 
-          <Link to={tema.panel} >Ver video</Link>
+          <Link to={'/'} >Ver video</Link>
 
         </AccordionDetails>
       </Accordion>
-        )
-      })}
-    </div>
+
+      <Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
+        <AccordionSummary aria-controls="panel7d-content"  id="panel7d-header">
+          <Typography>Voto en blanco</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+        <Typography>
+            texto
+          </Typography>
+
+          <Link to={'/'}>Ver video</Link>
+
+        </AccordionDetails>
+      </Accordion>
+
+
+      <Accordion expanded={expanded === 'panel8'} onChange={handleChange('panel8')}>
+        <AccordionSummary aria-controls="panel8d-content"  id="panel8d-header">
+          <Typography>Voto Recorrido</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+        <Typography>
+            texto
+          </Typography>
+
+          <Link to={'/'}>Ver video</Link>
+
+        </AccordionDetails>
+      </Accordion>
+
+
+      <Accordion expanded={expanded === 'panel9'} onChange={handleChange('panel9')}>
+        <AccordionSummary aria-controls="panel9d-content"  id="panel9d-header">
+          <Typography>Voto Impugnado</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+        <Typography>
+            texto
+          </Typography>
+
+          <Link to={'/'}>Ver video</Link>
+
+        </AccordionDetails>
+      </Accordion>
+
+
+
+        </AccordionDetails>
+      </Accordion>
+
+
+    </section>
   );
 }
