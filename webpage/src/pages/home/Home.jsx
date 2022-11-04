@@ -1,5 +1,5 @@
 import React from 'react'
-import Carusel from 'react-elastic-carousel'
+
 import Carrusel from '../../Components/pure/Carrusel'
 import Item from '../../Components/pure/Item'
 

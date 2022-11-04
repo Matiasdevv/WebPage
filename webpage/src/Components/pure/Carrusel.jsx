@@ -12,6 +12,9 @@ import { steps } from '../../models/steps';
 
 export default function Carrusel() {
   const theme = useTheme();
+
+  const videosCantidad = 1;
+
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = steps.length;
 
@@ -22,6 +25,8 @@ export default function Carrusel() {
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
+
+
 
   return (
     <>
@@ -35,18 +40,19 @@ export default function Carrusel() {
           height: 50,
           pl: 2,
           bgcolor: 'transparent',
+          zIndex:'0'
         }}
       >
         <Typography>Seccion de videos</Typography>
       </Paper>
-    <Box sx={{ maxWidth: '100vw', flexGrow: 1, display: 'flex', margin:'auto' }}>
+    <Box sx={{ maxWidth: '100vw', flexGrow: 1, display: 'flex', margin:'auto', zIndex:'0' }}>
 
       <MobileStepper
         variant="none"
         steps={maxSteps}
         position="static"
         activeStep={activeStep}
-        style={{backgroundColor: 'transparent', borderRadius: '20px', flex:'1 1 auto'}}
+        style={{backgroundColor: 'transparent', borderRadius: '20px', flex:'1 1 auto', zIndex:'0'}}
         backButton={
           <Button fontSize="large" onClick={handleBack} disabled={activeStep === 0} >
             {theme.direction === 'rtl' ? (
@@ -59,22 +65,24 @@ export default function Carrusel() {
         }
       />
 
-      {/* {steps.map(step=>{
-        return(
-                  <Box sx={{ height: 255, maxWidth: 500, width: '100%', p: 2, flex: '3 1 auto' }}>
-                    {step.description}
-                </Box>
-        )
-
-      })} */}
 
 
-      <Box sx={{ height: 255, maxWidth: 500, width: '100%', p: 2, flex: '3 1 auto' }}>
-                    {steps[activeStep].video}
-     </Box>
-     <Box sx={{ height: 255, maxWidth: 500, width: '100%', p: 2, flex: '3 1 auto' }}>
-                    {steps[activeStep].video}
-     </Box>
+        {
+          steps.map((step,index)=>{
+            if(index <= videosCantidad && index <= maxSteps)
+            return(
+              <Box sx={{ height: 255, maxWidth: 500, width: '100%', p: 2, flex: '3 1 auto' }} >
+               { activeStep + index < maxSteps && (steps[index + activeStep].video) }
+              </Box>
+            )
+          })
+        }
+
+
+
+
+
+
 
 
 
@@ -83,7 +91,7 @@ export default function Carrusel() {
         steps={maxSteps}
         position="static"
         activeStep={activeStep}
-        style={{backgroundColor: 'transparent', borderRadius: '10px' , flex:'1 1 auto'}}
+        style={{backgroundColor: 'transparent', borderRadius: '10px' , flex:'1 1 auto', Color:'#000', zIndex:'0'}}
         nextButton={
           <Button
             size="Large"
